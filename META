@@ -8,7 +8,7 @@ archive(native,plugin) = "higlo.cmxs"
 package "lexers" (
   version = "0.5"
   description = "Higlo lexers"
-  requires = "higlo.dot,higlo.json,higlo.ocaml,higlo.xml"
+  requires = "higlo.dot,higlo.json,higlo.ocaml,higlo.reason,higlo.xml"
 )
 package "dot" (
   version = "0.5"
@@ -37,6 +37,15 @@ package "ocaml" (
   archive(native) = "higlo_ocaml.cmx"
   archive(native,plugin) = "higlo_ocaml.cmxs"
 )
+package "reason" (
+  version = "0.5"
+  description = "Higlo Reason lexer"
+  requires = "higlo"
+  archive(toploop) = "higlo_reason.cmo"
+  archive(byte) = "higlo_reason.cmo"
+  archive(native) = "higlo_reason.cmx"
+  archive(native,plugin) = "higlo_reason.cmxs"
+)
 package "xml" (
   version = "0.5"
   description = "Higlo XML lexer"
@@ -54,4 +63,3 @@ package "main" (
   archive(byte) = "higlo_main.cmo"
   archive(native) = "higlo_main.cmx"
 )
-

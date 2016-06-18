@@ -37,6 +37,7 @@ LEXERS=\
 	higlo_dot.cmx \
 	higlo_json.cmx \
 	higlo_ocaml.cmx \
+	higlo_reason.cmx \
 	higlo_xml.cmx
 
 LEXERS_BYTE=$(LEXERS:.cmx=.cmo)
@@ -116,7 +117,7 @@ $(MK_HIGLO):
 #	@echo 'package "lexers" (' >> META
 #	@echo '  version = "$(VERSION)"' >> META
 #	@echo '  description = "Higlo lexers"' >> META
-#	@echo '  requires = "higlo.ocaml,higlo.xml"' >> META
+#	@echo '  requires = "higlo.ocaml,higlo.reason,higlo.xml"' >> META
 #	@echo ')' >> META
 #	@for i in `echo $(LEXERS) | cut -d'.' -f 1`; do \
 #	echo 'package "$$i" ( \
@@ -196,5 +197,3 @@ headers:
 
 noheaders:
 	headache -r -c .headache_config $(HEADFILES)
-
-

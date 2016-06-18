@@ -4,6 +4,8 @@ higlo_main.cmo : higlo_printers.cmi higlo.cmi
 higlo_main.cmx : higlo_printers.cmx higlo.cmx
 higlo_ocaml.cmo : higlo.cmi
 higlo_ocaml.cmx : higlo.cmx
+higlo_reason.cmo : higlo.cmi
+higlo_reason.cmx : higlo.cmx
 higlo_printers.cmo : higlo.cmi higlo_printers.cmi
 higlo_printers.cmx : higlo.cmx higlo_printers.cmi
 t.cmo :
